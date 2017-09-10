@@ -20,5 +20,12 @@ Add a application debug configuration similar to the existing "CerealProductionA
   
 Step 5-
 Degug and test your map reduce job. Make sure your debug configuration created in step 4 is selected on top right dropdown button. If everything works your output is available in the output folder in the project. Please makesure you delete the folder in each run.
+
+Step 6-
+If everything working as expected we need to create a .jar file for each new job you create. Please follow the steps in following link to achieve this.
+https://blog.jetbrains.com/idea/2010/08/quickly-create-jar-artifact/
+
+Step 7-
+Then we need to deploy newly created map reduce jobs to the hadoop cluster on the cloud. 
   
 
