@@ -18,7 +18,7 @@ Add a application debug configuration similar to the existing "CerealProductionA
   * Set the name of your main class as main class
   * Set "input output" to program arguments
   
-Step -5
+Step 5-
 Degug and test your map reduce job. Make sure your debug configuration created in step 4 is selected on top right dropdown button. If everything works your output is available in the output folder in the project. Please makesure you delete the folder in each run.
   
 
