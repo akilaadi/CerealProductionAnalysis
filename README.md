@@ -1,2 +1,2 @@
 # CerealProductionAnalysis
-This mapreduce job analyses yearly Sri Lankan cerial production.
+This mapreduce job analyses yearly Sri Lankan cereal production.
