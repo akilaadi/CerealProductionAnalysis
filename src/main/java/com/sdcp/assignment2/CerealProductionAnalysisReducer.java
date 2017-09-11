@@ -6,7 +6,7 @@ import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class CerealProductionAnalysisReducer extends
+  public class CerealProductionAnalysisReducer extends
         Reducer<Text, FloatWritable, Text, FloatWritable> {
     @Override
     public void reduce(Text key, Iterable<FloatWritable> values, Context context)
@@ -17,8 +17,8 @@ public class CerealProductionAnalysisReducer extends
             sum += val.get();
             count++;
         }
-
-        //calculate the average retail price
+        //calculate the average effectiveness
         context.write(key, new FloatWritable(sum / count));
     }
-}
+  }
+

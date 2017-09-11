@@ -29,9 +29,7 @@ public class CerealProductionAnalysisMain {
             job.setCombinerClass(CerealProductionAnalysisReducer.class);
             job.setInputFormatClass(CSVInputFormat.class);
             job.setOutputFormatClass(TextOutputFormat.class);
-            //FileInputFormat.addInputPath(job, new Path(args[0] + "/cereal_production_statistics_maha_season_2006.csv"));
-            FileInputFormat.addInputPath(job, new Path(args[0] + "/cereal_production_statistics_yala_season_2009.csv"));
-            //FileInputFormat.addInputPath(job, new Path(args[0]));
+            FileInputFormat.addInputPath(job, new Path(args[0]));
             FileOutputFormat.setOutputPath(job, (new Path(args[1])));
             System.exit(job.waitForCompletion(true) ? 0 : 1);
 

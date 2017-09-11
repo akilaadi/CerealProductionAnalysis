@@ -24,12 +24,17 @@ public class CerealProductionAnalysisMapper extends
 
     public void map(Text key, Text value, Context context) throws IOException, InterruptedException {
         try{
-            String[] lineItems = value.toString().replaceAll("(?<=\\d)\\,(?=\\d+\\s\\\")","").replace("\"", "").split(",");
+            String[] lineItems = value.toString().replaceAll("(?<=\\d)\\,(?=\\d+\\s\\\")","")
+                    .replace("\"", "")
+                    .split(",");
             if(lineItems != null && lineItems.length > 0 && !lineItems[0].trim().equals("DISTRICT")){
                 for (int i = 0;i< cereals.length;i++) {
                     if(2*i + 2 < lineItems.length){
-                        float area = lineItems[2*i + 1] == null ||  lineItems[2*i + 1].trim().replaceAll("[\\D]", "").isEmpty() ? 0 : Float.parseFloat(lineItems[2*i + 1]);
-                        float production = lineItems[2*i + 2] == null ||  lineItems[2*i + 2].trim().replaceAll("[\\D]","").isEmpty() ? 0 : Float.parseFloat(lineItems[2*i + 2]);
+                        float area = lineItems[2*i + 1] == null ||  lineItems[2*i + 1]
+                                .trim().replaceAll("[\\D]", "")
+                                .isEmpty() ? 0 : Float.parseFloat(lineItems[2*i + 1]);
+                        float production = lineItems[2*i + 2] == null ||  lineItems[2*i + 2].
+                                trim().replaceAll("[\\D]","").isEmpty() ? 0 : Float.parseFloat(lineItems[2*i + 2]);
                         word.set(cereals[i]);
                         val.set(production == 0 || area == 0 ? 0 : production/area);
                         context.write(word,val);
@@ -40,7 +45,6 @@ public class CerealProductionAnalysisMapper extends
         catch (Exception ex){
             logger.error(ex.getMessage());
         }
-
     }
 }
 
