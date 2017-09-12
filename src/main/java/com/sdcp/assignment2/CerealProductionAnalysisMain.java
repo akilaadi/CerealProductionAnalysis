@@ -17,21 +17,39 @@ public class CerealProductionAnalysisMain {
 
     public static void main(String[] args) {
         Configuration conf = new Configuration();
-        Job job;
+        Job job1,job2;
         try {
-            job = Job.getInstance(conf, "CerealProductionAnalysis");
-            job.setJarByClass(CerealProductionAnalysisMain.class);
-            job.setJobName("Cereal Production Analysis");
-            job.setOutputKeyClass(Text.class);
-            job.setOutputValueClass(FloatWritable.class);
-            job.setMapperClass(CerealProductionAnalysisMapper.class);
-            job.setReducerClass(CerealProductionAnalysisReducer.class);
-            job.setCombinerClass(CerealProductionAnalysisReducer.class);
-            job.setInputFormatClass(CSVInputFormat.class);
-            job.setOutputFormatClass(TextOutputFormat.class);
-            FileInputFormat.addInputPath(job, new Path(args[0]));
-            FileOutputFormat.setOutputPath(job, (new Path(args[1])));
-            System.exit(job.waitForCompletion(true) ? 0 : 1);
+            job1 = Job.getInstance(conf, "CerealProductionAnalysis");
+            job1.setJarByClass(CerealProductionAnalysisMain.class);
+            job1.setJobName("Cereal Production Analysis");
+            job1.setOutputKeyClass(Text.class);
+            job1.setOutputValueClass(FloatWritable.class);
+            job1.setMapperClass(CerealProductionAnalysisMapper.class);
+            job1.setReducerClass(CerealProductionAnalysisReducer.class);
+            job1.setCombinerClass(CerealProductionAnalysisReducer.class);
+            job1.setInputFormatClass(CSVInputFormat.class);
+            job1.setOutputFormatClass(TextOutputFormat.class);
+            FileInputFormat.addInputPath(job1, new Path(args[0]));
+            FileOutputFormat.setOutputPath(job1, (new Path(args[1]+"/job1")));
+
+            job2 = Job.getInstance(conf, "ProductionEffectivenessByDistrict");
+            job2.setJarByClass(CerealProductionAnalysisMain.class);
+            job2.setJobName("Production Effectiveness By District");
+            job2.setOutputKeyClass(Text.class);
+            job2.setOutputValueClass(FloatWritable.class);
+            job2.setMapperClass(ProductionEffectivenessByDistrictMapper.class);
+            job2.setReducerClass(ProductionEffectivenessByDistrictReducer.class);
+            job2.setCombinerClass(ProductionEffectivenessByDistrictReducer.class);
+            job2.setInputFormatClass(CSVInputFormat.class);
+            job2.setOutputFormatClass(TextOutputFormat.class);
+            FileInputFormat.addInputPath(job2, new Path(args[0]));
+            FileOutputFormat.setOutputPath(job2, (new Path(args[1] + "/job2")));
+
+            job1.submit();
+            if(job1.waitForCompletion(true)){
+                job2.submit();
+                System.exit(job2.waitForCompletion(true) ? 0 : 1);
+            }
 
         } catch (IOException e) {
             //logger.error(e.getMessage());
