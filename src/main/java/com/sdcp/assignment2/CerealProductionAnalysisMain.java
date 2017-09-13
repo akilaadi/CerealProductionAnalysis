@@ -17,7 +17,7 @@ public class CerealProductionAnalysisMain {
 
     public static void main(String[] args) {
         Configuration conf = new Configuration();
-        Job job1,job2;
+        Job job1,job2,job3;
         try {
             job1 = Job.getInstance(conf, "CerealProductionAnalysis");
             job1.setJarByClass(CerealProductionAnalysisMain.class);
@@ -45,10 +45,24 @@ public class CerealProductionAnalysisMain {
             FileInputFormat.addInputPath(job2, new Path(args[0]));
             FileOutputFormat.setOutputPath(job2, (new Path(args[1] + "/job2")));
 
+            job3 = Job.getInstance(conf, "DistrictContributionAnalysisMapper");
+            job3.setJobName("District Contribution Analysis Mapper");
+            job3.setOutputKeyClass(Text.class);
+            job3.setOutputValueClass(FloatWritable.class);
+            job3.setMapperClass(DistrictContributionAnalysisMapper.class);
+            job3.setReducerClass(DistrictContributionAnalysisReducer.class);
+            job3.setCombinerClass(ProductionEffectivenessByDistrictReducer.class);
+            job3.setInputFormatClass(CSVInputFormat.class);
+            job3.setOutputFormatClass(TextOutputFormat.class);
+            FileInputFormat.addInputPath(job3, new Path(args[0]));
+            FileOutputFormat.setOutputPath(job3, (new Path(args[1] + "/job3")));
+
             job1.submit();
             if(job1.waitForCompletion(true)){
                 job2.submit();
-                System.exit(job2.waitForCompletion(true) ? 0 : 1);
+                if(job2.waitForCompletion(true)){
+                    System.exit(job3.waitForCompletion(true) ? 0 : 1);
+                }
             }
 
         } catch (IOException e) {
