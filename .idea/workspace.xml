@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CerealProductionAnalysis:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4a95928-f605-4cd4-8b55-8dcd5ad6643c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/ProductionEffectivenessByDistrictMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/ProductionEffectivenessByDistrictReducer.java" />
-      <change type="DELETED" beforePath="C:\Users\akilaa\IdeaProjects\CerealProductionAnalysis\output\._SUCCESS.crc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\akilaa\IdeaProjects\CerealProductionAnalysis\output\.part-r-00000.crc" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\akilaa\IdeaProjects\CerealProductionAnalysis\output\_SUCCESS" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\akilaa\IdeaProjects\CerealProductionAnalysis\output\part-r-00000" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sdcp/assignment2/CerealProductionAnalysisMain.class" afterPath="$PROJECT_DIR$/target/classes/com/sdcp/assignment2/CerealProductionAnalysisMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/CerealProductionAnalysisMain.java" afterPath="$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/CerealProductionAnalysisMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/CerealProductionAnalysis_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/job1/.part-r-00000.crc" afterPath="$PROJECT_DIR$/output/job1/.part-r-00000.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CerealProductionAnalysis_jar/CerealProductionAnalysis.jar" afterPath="$PROJECT_DIR$/out/artifacts/CerealProductionAnalysis_jar/CerealProductionAnalysis.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/job1/part-r-00000" afterPath="$PROJECT_DIR$/output/job1/part-r-00000" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CerealProductionAnalysis.iws" />
@@ -70,8 +71,8 @@
       <file leaf-file-name="ProductionEffectivenessByDistrictReducer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/ProductionEffectivenessByDistrictReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46321526" vertical-offset="0" max-vertical-offset="442">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7411444" vertical-offset="0" max-vertical-offset="442">
+              <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -266,6 +267,9 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager" selected="Application.CerealProductionAnalysis">
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -549,15 +553,15 @@
       <updated>1505032711326</updated>
       <workItem from="1505032714056" duration="553000" />
       <workItem from="1505033289176" duration="379000" />
-      <workItem from="1505035436600" duration="7487000" />
+      <workItem from="1505035436600" duration="9625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8419000" />
+    <option name="totallyTimeSpent" value="10557000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="7" width="1366" height="728" extended-state="1" />
+    <frame x="-7" y="7" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -691,11 +695,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sdcp/assignment2/ProductionEffectivenessByDistrictReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46321526" vertical-offset="0" max-vertical-offset="442">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7411444" vertical-offset="0" max-vertical-offset="442">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>CerealProductionAnalysis:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CerealProductionAnalysis</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
